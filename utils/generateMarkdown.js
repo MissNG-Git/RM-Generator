@@ -1,52 +1,48 @@
-// const AGPLv3 = {
-//   badge: 'https://img.shields.io/badge/License-AGPL%20v3-blue.svg',
-//   link: 'https://www.gnu.org/licenses/agpl-3.0',
-// }
-
-// const GPLv3 = {
-//   badge: 'https://img.shields.io/badge/License-GPLv3-blue.svg',
-//   link: 'https://www.gnu.org/licenses/gpl-3.0',
-// }
-
-// const LGPLv3 = {
-//   badge: 'https://img.shields.io/badge/License-LGPL%20v3-blue.svg',
-//   link: 'https://www.gnu.org/licenses/lgpl-3.0',
-// }
-
-// const Mozilla2 = {
-//   badge: 'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg',
-//   link: 'https://opensource.org/licenses/MPL-2.0',
-// }
-
-// const Apache2 = {
-//   badge: 'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
-//   link: 'https://opensource.org/licenses/Apache-2.0',
-// }
-
-// const MIT = {
-//   badge: 'https://img.shields.io/badge/License-MIT-yellow.svg',
-//   link: 'https://opensource.org/licenses/MIT'
-// }
-
-// const Boost1 = {
-//   badge: 'https://img.shields.io/badge/License-Boost%201.0-lightblue.svg',
-//   link: 'https://www.boost.org/LICENSE_1_0.txt'
-// }
-
-// const Unlicense = {
-//   badge: 'https://img.shields.io/badge/license-Unlicense-blue.svg',
-//   link: 'http://unlicense.org/'
-// }
+function licenseGen(data) {
+  if (data.license === 'GNU AGPLv3') {
+    data.path = `AGPL%20v3-blue.svg`;
+    data.link = `https://www.gnu.org/licenses/agpl-3.0`
+  }
+  else if (data.license === 'GNU GPLv3') {
+    data.path = `GPLv3-blue.svg`;
+    data.link = `https://www.gnu.org/licenses/gpl-3.0`
+  }
+  else if (data.license === 'GNU LGPLv3') {
+    data.path = `LGPL%20v3-blue.svg`;
+    data.link = `https://www.gnu.org/licenses/lgpl-3.0`
+  }
+  else if (data.license === 'Mozilla Public License 2.0') {
+    data.path = `MPL%202.0-orange.svg`;
+    data.link = `https://opensource.org/licenses/MPL-2.0`
+  }
+  else if (data.license === 'Apache License 2.0') {
+    data.path = `Apache%202.0-yellow.svg`;
+    data.link = `https://opensource.org/licenses/Apache-2.0`
+  }
+  else if (data.license === 'MIT License') {
+    data.path = `MIT-lightgrey.svg`;
+    data.link = `https://opensource.org/licenses/MIT`
+  }
+  else if (data.license === 'Boost Software License 1.0') {
+    data.path = `Boost%201.0-lightblue.svg`;
+    data.link = `https://www.boost.org/LICENSE_1_0.txt`
+  }
+  else if (data.license === 'The Unlicense') {
+    data.path = `Unlicense-brightgreen.svg`;
+    data.link = `http://unlicense.org/`
+  }
+}
 
 function generateMarkdown(data) {
+  licenseGen(data);
   if (data.license === 'N/A') {
     data.badge = `_No License_`;
     data.blurb = `This project does not have a license.`
   }
   else {
-    data.badge = `[![License Badge](https://img.shields.io/badge/license-${data.license}-blue.svg).`
-    data.blurb = `This work is covered by ${data.license} license.`
-  // For more information [see full license.](${data.link})`
+    data.badge = `[![License Badge](https://img.shields.io/badge/license-${data.path}).`
+    data.blurb = `This work is covered by ${data.license} license.
+  For more information [see full license.](${data.link})`
   };
 
   return `
