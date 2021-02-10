@@ -2,6 +2,33 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const valCheck = (value) => { if(value){return true} else {return 'Please enter a value.'}};
+let path = './demo/demoREADME.md';
+
+try {
+    if (fs.existsSync(path)) {
+        inquirer
+        .prompt(
+          {
+            type: "list",
+            message: "Overwrite existing demoREADME.md?",
+            name: "overwrite",
+            choices: ["yes", "no", "cancel"]
+          })
+        .then(function (response) {
+          if (response.overwrite === "no") {
+            path = './demo/demoREADME1.md';
+            init();
+          } 
+          else if (response.overwrite === "yes") {
+            init();
+          };
+        })
+    } 
+    else { init(); }
+} 
+catch (err) {
+    console.error(err);
+}
 
 const questions = [
     {
@@ -88,8 +115,8 @@ const questions = [
     }
 ];
 
-function writeToFile(fileName, data) {
-    fs.writeFile('./demo/'+fileName, data, err => {
+function writeToFile(path, data) {
+    fs.writeFile(path, data, err => {
         if(err){
             console.log(err)
         }
@@ -101,9 +128,7 @@ async function init() {
     await inquirer
     .prompt(questions)
     .then(response => {
-        writeToFile('demoREADME.md', generateMarkdown(response));
+        writeToFile(path, generateMarkdown(response));
         console.log("Thank you for using the MissNG README generator! :)");
     });    
 }
-
-init();
