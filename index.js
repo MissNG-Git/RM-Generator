@@ -9,8 +9,9 @@ const valCheck = (value) => { if(value){return true} else {return 'Please enter 
 const questions = [
     {
         type: 'input',
-        message: "What is your GitHub username? (No @ needed)",
+        message: "What is your GitHub username? (w/o @)",
         name: 'git',
+        default: 'MissNG-Git',
         // validate, link to GH profile
         validate: valCheck
     },
@@ -19,6 +20,7 @@ const questions = [
         type: 'input',
         message: "What is your email address?",
         name: 'email',
+        default: 'test@nonymous.com',
         validate: valCheck
     },
 
@@ -31,21 +33,21 @@ const questions = [
 
     {
         type: 'input',
-        message: "Write a description for your project.",
+        message: "Write a short description for your project.",
         name: 'description',
         validate: valCheck
     },
 
     {
         type: 'input',
-        message: "Describe the steps required to install your project for the Installation section.",
+        message: "What steps are required to install your project?",
         name: "installation",
         validate: valCheck
     },
 
     {
         type: 'input',
-        message: "Provide instructions and examples of your project in use for the Usage section.",
+        message: "Provide instructions and usage examples of your project.",
         name: 'usage',
         validate: valCheck
     },
@@ -61,13 +63,15 @@ const questions = [
     {
         type: 'input',
         message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-        name: 'contributions'
+        name: 'contributions',
+        default: 'N/A'
     },
 
     {
         type: 'input',
         message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-        name: 'testing'
+        name: 'testing',
+        default: 'N/A'
     }
 ];
 
