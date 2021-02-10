@@ -1,18 +1,14 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const valCheck = (value) => { if(value){return true} else {return 'Please enter a value.'}};
 
-
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         message: "What is your GitHub username? (w/o @)",
         name: 'git',
         default: 'MissNG-Git',
-        // validate, link to GH profile
         validate: valCheck
     },
 
@@ -82,7 +78,6 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile('./demo/'+fileName, data, err => {
         if(err){
@@ -92,16 +87,13 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
 async function init() {
     await inquirer
     .prompt(questions)
     .then(response => {
-        // Write markdown to file
         writeToFile('demoREADME.md', generateMarkdown(response));
         console.log("Thank you for using the MissNG README generator! :)");
     });    
 }
 
-// Function call to initialize app
 init();
