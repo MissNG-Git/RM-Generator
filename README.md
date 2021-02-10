@@ -1,6 +1,6 @@
 # 09 Node.js Homework: Professional README Generator
 
-⋘ ──── ∗⋅◦∘◈\[[MissNG README Generator](#Mock-Up)\]◈∘◦⋅∗ ──── ⋙
+⋘ ──── ∗⋅◦∘◈\[[MissNG README Generator](#mock-up)\]◈∘◦⋅∗ ──── ⋙
 
 Use my README generator to easily create a high-quality README right from your terminal! This command-line application will dynamically generate a professional README.md file by registering a user's input to a list of prompts.
 
@@ -22,7 +22,7 @@ Technologies utilised include...
 
 The following image demonstrates the application functionality:
 
-![README Generator demo](./utils/_____.gif)
+![README Generator demo](./demo/demoREADME.gif)
 
 ### ≫ ──── ≪•◦ Overview of Code Functionality ◦•≫ ──── ≪
 
@@ -40,11 +40,11 @@ The following image demonstrates the application functionality:
 
 ### ≫ ──── ≪•◦ Usability ◦•≫ ──── ≪
 
-* Invoke the application by using the following command:
+* Create a clone of [this repository](https://github.com/MissNG-Git/genREADME.git)
 
-```bash
-node index.js
-```
+* Navigate to directory containing cloned repository
+
+* Invoke the application by using the "_node index.js_" command in GitBash/Terminal
 
 * Answer the following prompts accordingly:
 
@@ -60,7 +60,7 @@ node index.js
 ? If applicable, provide any tests written for your application and provide examples on how to run them.
 ```
 
-* A "Thank you" and confirmation message will display in Terminal to advise that the README has been created successffully
+* A "Thank you" and confirmation message will display in terminal to advise successful creation of README
 **Note:** _the markdown file will be generated in the demo folder_
 
-* Navigate to the **demo** folder and open the _demoREADME.md_ file to see your generated README!
+* Navigate to the **demo** folder and open the _demoREADME.md_ file to see your generated README! 😎

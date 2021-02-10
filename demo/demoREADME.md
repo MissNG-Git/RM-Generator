@@ -1,7 +1,7 @@
 
-  # README generator
-  Generate high-quality READMEs with ease!
-  [![License Badge](https://img.shields.io/badge/license-GNU LGPLv3-blue.svg).
+  # README Generator
+  A simple command-line application you can use to quickly generate a professional README.
+  [![License Badge](https://img.shields.io/badge/license-Mozilla Public License 2.0-blue.svg).
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,17 +10,17 @@
   * [Testing](#testing)
    
   # Installation
-  1. 
+  1. Clone repository\ 2. Navigate to directory with cloned repository is\ 3. Run npm install in terminal/GitBash
 
   ## Usage
-  a. agj \ b. kaldjfb
+  Great for developers wanting an easy way to generate READMEs for their project(s)!
 
   ### Instructions
-  1. oiauf  2. adofiujoiaweur  3. oiapuert
+  * Open terminal / GitBash\ * Type `node index.js`\ * Answer prompts & receive confirmation message\ * Navigate to _demo_ folder & open demoREADME.md file.
 
   ## License
-  GNU LGPLv3:
-  This work is covered by GNU LGPLv3 license.
+  Mozilla Public License 2.0:
+  This work is covered by Mozilla Public License 2.0 license.
   
   ## Contribution
   N/A
