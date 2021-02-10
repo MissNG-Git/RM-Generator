@@ -18,7 +18,7 @@ Technologies utilised include...
 + Provide a README that is not only functional but looks professional
 ```
 
-## ≫ ──── ≪•◦ Mock-Up ◦•≫ ──── ≪
+## Mock-Up
 
 The following image demonstrates the application functionality:
 
