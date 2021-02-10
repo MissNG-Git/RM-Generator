@@ -47,8 +47,15 @@ const questions = [
 
     {
         type: 'input',
-        message: "Provide instructions and usage examples of your project.",
+        message: "Give some usage examples of your project.",
         name: 'usage',
+        validate: valCheck
+    },
+
+    {
+        type: 'input',
+        message: "Provide instructions on how to use your project.",
+        name: 'instructions',
         validate: valCheck
     },
 

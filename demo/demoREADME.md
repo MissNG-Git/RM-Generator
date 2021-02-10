@@ -1,6 +1,7 @@
 
-  # name
-  age
+  # README generator
+  Generate high-quality READMEs with ease!
+  [![License Badge](https://img.shields.io/badge/license-GNU LGPLv3-blue.svg).
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -9,21 +10,20 @@
   * [Testing](#testing)
    
   # Installation
-  123
+  1. 
 
   ## Usage
-  321
+  a. agj \ b. kaldjfb
 
   ### Instructions
-  undefined
+  1. oiauf  2. adofiujoiaweur  3. oiapuert
 
   ## License
-  [![License Badge](https://img.shields.io/badge/license-undefinedblue.svg). 
-    This work is covered by undefined license. 
-    For more information [see full license.](function link() { [native code] })
-
+  GNU LGPLv3:
+  This work is covered by GNU LGPLv3 license.
+  
   ## Contribution
-  undefined
+  N/A
 
   ## Testing
   N/A

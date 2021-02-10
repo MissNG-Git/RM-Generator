@@ -38,23 +38,21 @@
 //   link: 'http://unlicense.org/'
 // }
 
-function renderLicenseSection(data) {
-  if (data.license === 'N/A') {
-    return `No license.`
-  } 
-  else {
-    return `[![License Badge](https://img.shields.io/badge/license-${data.license}blue.svg). 
-    This work is covered by ${data.license} license. 
-    For more information [see full license.](${data.link})`
-  }
-}
-
 function generateMarkdown(data) {
-  const licenseSection = renderLicenseSection(data.license, data.name);
+  if (data.license === 'N/A') {
+    data.badge = `_No License_`;
+    data.blurb = `This project does not have a license.`
+  }
+  else {
+    data.badge = `[![License Badge](https://img.shields.io/badge/license-${data.license}-blue.svg).`
+    data.blurb = `This work is covered by ${data.license} license.`
+  // For more information [see full license.](${data.link})`
+  };
 
   return `
   # ${data.title}
   ${data.description}
+  ${data.badge}
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -72,10 +70,11 @@ function generateMarkdown(data) {
   ${data.instructions}
 
   ## License
-  ${licenseSection}
-
+  ${data.license}:
+  ${data.blurb}
+  
   ## Contribution
-  ${data.contribution}
+  ${data.contributions}
 
   ## Testing
   ${data.testing}
