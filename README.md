@@ -1,4 +1,4 @@
-# 09 Node.js Homework: Professional README Generator
+# 09 Node.js: Professional README Generator
 
 ⋘ ──── ∗⋅◦∘◈\[[MissNG README Generator](#mock-up)\]◈∘◦⋅∗ ──── ⋙
 
